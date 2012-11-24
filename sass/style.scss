@@ -1,6 +1,6 @@
 @import "compass";
 @import "compass/reset";
-@import "partials/media-queries";
+@import "partials/mixins";
 
 #wrapper {
    margin: auto;
@@ -13,68 +13,90 @@
 header {
    @include respond-to(handhelds) {
       width: 100%;
+      text-align: center;
       
       h1#site-title {
          width: 100%;
          font-size: 30px;
          text-align: center;
          margin-bottom: 10px;
+         margin-top: 5px;
       }
    }
    
    nav {
+      margin: auto;
       
-   }
-}
-
-
-nav {
-   width: 250px;
-   background-color: rgb(0, 150, 255);
-   padding: 5px;
-   
-   h2#slide-toggle {
-      width: 96%;
-      font-size: 18px;
-      color: #fff;
-      font-family: Baskerville, Georgia, sans-serif;
-      padding-left: 3%;
-      padding-bottom: 3px;
-      border-bottom: 1px solid lighten(rgb(0, 150, 255), 12%);
-      
-      span {
-         float: right;
-         cursor: pointer;
+      @include respond-to(handhelds) {
+         width: 90%;
+         background-color: rgb(0, 150, 255);
+         padding: 2%;
+         @include rounded-corners(6px);
       }
-   }
-   
-   ul.menu {
-      width: 100%;
-      display: none;
       
-      li.menu-item {
-         width: 95%;
-         padding-left: 3%;
-         padding-top: 3px;
-         padding-bottom: 3px;
-         margin-top: 2px;
-         border-radius: 5px;
-         border: 1px solid rgb(0, 150, 255);
+      h2#slide-toggle {
          
-         &:first-child {
-            margin-top: 5px;
-         }
-         
-         &.active,
-         &:hover {
-            background-color: darken(rgb(0, 150, 255), 5%);
-            border: 1px solid lighten(rgba(0, 150, 255, 1), 8%);
-         }
-         
-         a {
+         @include respond-to(handhelds) {
+            width: 96%;
+            font-size: 18px;
             color: #fff;
-            text-decoration: none;
-            font-family: Verdana, Helvetica, Arial, sans-serif;
+            font-family: Georgia, sans-serif;
+            font-weight: normal;
+            padding-left: 3%;
+            padding-bottom: 3px;
+            border-bottom: 1px solid lighten(rgb(0, 150, 255), 12%);
+            text-align: left;
+         }
+         
+         span {
+            @include respond-to(handhelds) {
+               float: right;
+               cursor: pointer;
+            }
+         }
+         
+         /* TODO: display: none for tablets and desktops */
+      }
+      
+      ul.menu {
+         
+         @include respond-to(handhelds) {
+            width: 100%;
+            display: none;
+         }
+         
+         li.menu-item {
+            
+            @include respond-to(handhelds) {
+               width: 100%;
+               padding-left: 3%;
+               padding-top: 3px;
+               padding-bottom: 3px;
+               margin-top: 2px;
+               @include rounded-corners(6px);
+               border: 1px solid rgb(0, 150, 255);
+            }
+            
+            &:first-child {
+               @include respond-to(handhelds) {
+                  margin-top: 5px;
+               }
+            }
+            
+            &.active {
+               @include respond-to(handhelds) {
+                  background-color: darken(rgb(0, 150, 255), 5%);
+                  border: 1px solid lighten(rgb(0, 150, 255), 8%);
+               }
+            }
+            
+            a {
+               @include respond-to(handhelds) {
+                  color: #fff;
+                  text-decoration: none;
+                  font-family: Verdana, Helvetica, Arial, sans-serif;
+               }
+            }
          }
       }
    }
