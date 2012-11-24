@@ -1,7 +1,24 @@
+/* ----------------------------------------------------- */
+/* Responsive Navigation
+/* James Addison Pellerano
+/* http://jamespellerano.com
+/* 
+/* Table of Contents ----------------------------------- */
+/* § 1. ...... Imports
+/* § 2. ...... Wrapper
+/* § 3. ...... Header
+/* § 3.1 ..... Site Title
+/* § 3.2 ..... Navigation Element
+/* § 3.2.1 ... Mobile Nav Slide Toggle
+/* § 3.2.2 ... Unordered List of Menu Items
+/* ----------------------------------------------------- */
+
+/* § 1. - Imports -------------------------------------- */
 @import "compass";
 @import "compass/reset";
 @import "partials/mixins";
 
+/* § 2. - Wrapper -------------------------------------- */
 #wrapper {
    margin: auto;
    
@@ -10,20 +27,23 @@
    }
 }
 
+/* § 3. - Header --------------------------------------- */
 header {
    @include respond-to(handhelds) {
       width: 100%;
       text-align: center;
-      
-      h1#site-title {
-         width: 100%;
-         font-size: 30px;
-         text-align: center;
-         margin-bottom: 10px;
-         margin-top: 5px;
-      }
    }
    
+   /* § 3.1 - Site Title ------------------------------- */
+   h1#site-title {
+      width: 100%;
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 5px;
+   }
+   
+   /* § 3.2 - Navigation Element ----------------------- */
    nav {
       margin: auto;
       
@@ -34,6 +54,7 @@ header {
          @include rounded-corners(6px);
       }
       
+      /* § 3.2.1 - Mobile Nav Slide Toggle ------------- */
       h2#slide-toggle {
          
          @include respond-to(handhelds) {
@@ -47,7 +68,7 @@ header {
             border-bottom: 1px solid lighten(rgb(0, 150, 255), 12%);
             text-align: left;
          }
-         
+         /* Toggle Button ------------------------------ */
          span {
             @include respond-to(handhelds) {
                float: right;
@@ -58,6 +79,7 @@ header {
          /* TODO: display: none for tablets and desktops */
       }
       
+      /* § 3.2.2 - Unordered List of Menu Items -------- */
       ul.menu {
          
          @include respond-to(handhelds) {
@@ -65,10 +87,11 @@ header {
             display: none;
          }
          
+         /* Menu Items --------------------------------- */
          li.menu-item {
             
             @include respond-to(handhelds) {
-               width: 100%;
+               width: 97%;
                padding-left: 3%;
                padding-top: 3px;
                padding-bottom: 3px;
@@ -77,12 +100,14 @@ header {
                border: 1px solid rgb(0, 150, 255);
             }
             
+            /* First Menu Item ------------------------- */
             &:first-child {
                @include respond-to(handhelds) {
                   margin-top: 5px;
                }
             }
             
+            /* Active Menu Item ------------------------ */
             &.active {
                @include respond-to(handhelds) {
                   background-color: darken(rgb(0, 150, 255), 5%);
@@ -90,6 +115,7 @@ header {
                }
             }
             
+            /* Link ------------------------------------ */
             a {
                @include respond-to(handhelds) {
                   color: #fff;
