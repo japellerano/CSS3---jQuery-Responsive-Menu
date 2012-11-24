@@ -1,5 +1,32 @@
 @import "compass";
 @import "compass/reset";
+@import "partials/media-queries";
+
+#wrapper {
+   margin: auto;
+   
+   @include respond-to(handhelds) {
+      width: 100%;
+   }
+}
+
+header {
+   @include respond-to(handhelds) {
+      width: 100%;
+      
+      h1#site-title {
+         width: 100%;
+         font-size: 30px;
+         text-align: center;
+         margin-bottom: 10px;
+      }
+   }
+   
+   nav {
+      
+   }
+}
+
 
 nav {
    width: 250px;
