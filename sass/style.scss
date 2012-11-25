@@ -2,8 +2,8 @@
 /* Responsive Navigation
 /* James Addison Pellerano
 /* http://jamespellerano.com
-/* Github URL/CodePen URL
-/* 
+/* Github: https://github.com/japellerano/CSS3---jQuery-Responsive-Menu
+/* CodePen: http://codepen.io/japellerano/pen/qGFlr
 /* Table of Contents ----------------------------------- */
 /* § 1. ...... Imports
 /* § 2. ...... Wrapper
@@ -19,23 +19,35 @@
 @import "compass/reset";
 @import "partials/mixins";
 
-/* § 2. - Wrapper -------------------------------------- */
+/* § 2. Body ------------------------------------------- */
+body {
+   @include respond-to(tablets) {
+      background-color: rgb(230, 230, 230);
+   }
+}
+
+/* § 3. - Wrapper -------------------------------------- */
 #wrapper {
    margin: auto;
    
    @include respond-to(handhelds) {
       width: 100%;
    }
+   
+   @include respond-to(tablets) {
+      width: 96%;
+      background-color: rgb(255, 255, 255);
+   }
 }
 
-/* § 3. - Header --------------------------------------- */
+/* § 4. - Header --------------------------------------- */
 header {
    @include respond-to(handhelds) {
       width: 100%;
       text-align: center;
    }
    
-   /* § 3.1 - Site Title ------------------------------- */
+   /* § 4.1 - Site Title ------------------------------- */
    h1#site-title {
       width: 100%;
       font-size: 30px;
@@ -44,7 +56,7 @@ header {
       margin-top: 5px;
    }
    
-   /* § 3.2 - Navigation Element ----------------------- */
+   /* § 4.2 - Navigation Element ----------------------- */
    nav {
       margin: auto;
       
@@ -55,7 +67,7 @@ header {
          @include rounded-corners(6px);
       }
       
-      /* § 3.2.1 - Mobile Nav Slide Toggle ------------- */
+      /* § 4.2.1 - Mobile Nav Slide Toggle ------------- */
       h2#slide-toggle {
          
          @include respond-to(handhelds) {
@@ -80,7 +92,7 @@ header {
          /* TODO: display: none for tablets and desktops */
       }
       
-      /* § 3.2.2 - Unordered List of Menu Items -------- */
+      /* § 4.2.2 - Unordered List of Menu Items -------- */
       ul.menu {
          
          @include respond-to(handhelds) {

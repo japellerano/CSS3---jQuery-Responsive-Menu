@@ -2,8 +2,8 @@
 /* Responsive Navigation
 /* James Addison Pellerano
 /* http://jamespellerano.com
-/* Github URL/CodePen URL
-/* 
+/* Github: https://github.com/japellerano/CSS3---jQuery-Responsive-Menu
+/* CodePen: http://codepen.io/japellerano/pen/qGFlr
 /* Table of Contents ----------------------------------- */
 /* § 1. ...... Imports
 /* § 2. ...... Wrapper
@@ -63,18 +63,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* Rounded Corners ------------------------------------- */
 /* Media Queries --------------------------------------- */
-/* § 2. - Wrapper -------------------------------------- */
+/* § 2. Body ------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background-color: #e6e6e6; } }
+
+/* § 3. - Wrapper -------------------------------------- */
 #wrapper {
   margin: auto; }
-  @media only screen and (min-width: 320px) {
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
     #wrapper {
       width: 100%; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #wrapper {
+      width: 96%;
+      background-color: white; } }
 
-/* § 3. - Header --------------------------------------- */
+/* § 4. - Header --------------------------------------- */
 header {
-  /* § 3.1 - Site Title ------------------------------- */
-  /* § 3.2 - Navigation Element ----------------------- */ }
-  @media only screen and (min-width: 320px) {
+  /* § 4.1 - Site Title ------------------------------- */
+  /* § 4.2 - Navigation Element ----------------------- */ }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
     header {
       width: 100%;
       text-align: center; } }
@@ -86,9 +95,9 @@ header {
     margin-top: 5px; }
   header nav {
     margin: auto;
-    /* § 3.2.1 - Mobile Nav Slide Toggle ------------- */
-    /* § 3.2.2 - Unordered List of Menu Items -------- */ }
-    @media only screen and (min-width: 320px) {
+    /* § 4.2.1 - Mobile Nav Slide Toggle ------------- */
+    /* § 4.2.2 - Unordered List of Menu Items -------- */ }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
       header nav {
         width: 90%;
         background-color: #0096ff;
@@ -97,7 +106,7 @@ header {
     header nav h2#slide-toggle {
       /* Toggle Button ------------------------------ */
       /* TODO: display: none for tablets and desktops */ }
-      @media only screen and (min-width: 320px) {
+      @media only screen and (min-width: 320px) and (max-width: 767px) {
         header nav h2#slide-toggle {
           width: 96%;
           font-size: 18px;
@@ -108,13 +117,13 @@ header {
           padding-bottom: 3px;
           border-bottom: 1px solid #3dafff;
           text-align: left; } }
-      @media only screen and (min-width: 320px) {
+      @media only screen and (min-width: 320px) and (max-width: 767px) {
         header nav h2#slide-toggle span {
           float: right;
           cursor: pointer; } }
     header nav ul.menu {
       /* Menu Items --------------------------------- */ }
-      @media only screen and (min-width: 320px) {
+      @media only screen and (min-width: 320px) and (max-width: 767px) {
         header nav ul.menu {
           width: 100%;
           display: none; } }
@@ -122,7 +131,7 @@ header {
         /* First Menu Item ------------------------- */
         /* Active Menu Item ------------------------ */
         /* Link ------------------------------------ */ }
-        @media only screen and (min-width: 320px) {
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
           header nav ul.menu li.menu-item {
             width: 97%;
             padding-left: 3%;
@@ -131,14 +140,14 @@ header {
             margin-top: 2px;
             border-radius: 6px;
             border: 1px solid #0096ff; } }
-        @media only screen and (min-width: 320px) {
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
           header nav ul.menu li.menu-item:first-child {
             margin-top: 5px; } }
-        @media only screen and (min-width: 320px) {
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
           header nav ul.menu li.menu-item.active {
             background-color: #0087e6;
             border: 1px solid #29a7ff; } }
-        @media only screen and (min-width: 320px) {
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
           header nav ul.menu li.menu-item a {
             color: #fff;
             text-decoration: none;
