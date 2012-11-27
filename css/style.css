@@ -115,7 +115,6 @@ header {
           font-weight: normal;
           padding-left: 3%;
           padding-bottom: 3px;
-          border-bottom: 1px solid #3dafff;
           text-align: left; } }
       @media only screen and (min-width: 320px) and (max-width: 767px) {
         header nav h2#slide-toggle span {
@@ -126,7 +125,8 @@ header {
       @media only screen and (min-width: 320px) and (max-width: 767px) {
         header nav ul.menu {
           width: 100%;
-          display: none; } }
+          display: none;
+          text-align: left; } }
       header nav ul.menu li.menu-item {
         /* First Menu Item ------------------------- */
         /* Active Menu Item ------------------------ */
@@ -138,8 +138,8 @@ header {
             padding-top: 3px;
             padding-bottom: 3px;
             margin-top: 2px;
-            border-radius: 6px;
-            border: 1px solid #0096ff; } }
+            border-top: 1px solid #0096ff;
+            border-bottom: 1px solid #0096ff; } }
         @media only screen and (min-width: 320px) and (max-width: 767px) {
           header nav ul.menu li.menu-item:first-child {
             margin-top: 5px; } }
