@@ -117,6 +117,7 @@ header {
             &:first-child {
                @include respond-to(handhelds) {
                   margin-top: 5px;
+                  /* @include sprite-css(home); */
                }
             }
             

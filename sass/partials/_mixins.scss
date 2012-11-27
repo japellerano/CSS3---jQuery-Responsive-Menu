@@ -27,3 +27,10 @@ $tablet-land: 1024px;
       }
    }
 }
+
+@import "icons/*.png";
+@mixin sprite-css($name) {
+   @include icons-sprite($name);
+   height: icons-sprite-height($name);
+   width: icons-sprite-width($name);
+}

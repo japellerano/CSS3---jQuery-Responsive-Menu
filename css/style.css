@@ -63,6 +63,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* Rounded Corners ------------------------------------- */
 /* Media Queries --------------------------------------- */
+.icons-sprite {
+  background: url('/images/icons-se4495319d5.png') no-repeat; }
+
 /* § 2. Body ------------------------------------------- */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   body {
@@ -142,7 +145,8 @@ header {
             border-bottom: 1px solid #0096ff; } }
         @media only screen and (min-width: 320px) and (max-width: 767px) {
           header nav ul.menu li.menu-item:first-child {
-            margin-top: 5px; } }
+            margin-top: 5px;
+            /* @include sprite-css(home); */ } }
         @media only screen and (min-width: 320px) and (max-width: 767px) {
           header nav ul.menu li.menu-item.active {
             background-color: #0087e6;
